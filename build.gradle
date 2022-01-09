@@ -9,7 +9,9 @@ buildscript {
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.8"
     }
 }
-
+tasks.create("stage") {
+    dependsOn("installDist")
+}
 version "0.1"
 group "emsi.mbds"
 
